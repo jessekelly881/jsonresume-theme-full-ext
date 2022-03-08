@@ -6,9 +6,10 @@
     <h2>Interests</h2>
     {{/if}}
     {{#if name}}
-    <span class="name">{{name}}:</span>
+    <span class="name">{{name}}</span>
     {{/if}}
     {{#if keywords.length}}
+    <span class="name">:</span>
     <span class="keywords">
       {{#each keywords}}
       <span>{{.}}</span>{{#if @last}}{{else}},{{/if}}

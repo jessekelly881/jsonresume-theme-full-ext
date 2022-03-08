@@ -3,6 +3,12 @@ var path = require("path");
 var Handlebars = require("handlebars");
 
 function render(resume) {
+	if (!resume.meta) {
+		resume.meta = {};
+	}
+	if (resume.meta.order) {
+		resume.meta.order = ["basics","skills", "work", "volunteer", "projects", "education", "awards","publications","languages","interests", "references"];
+	}
 	var css = fs.readFileSync(__dirname + "/style.css", "utf-8");
   var template = fs.readFileSync(__dirname + "/resume.hbs", "utf-8");
 	var partialsDir = path.join(__dirname, 'partials');

@@ -15,7 +15,7 @@
       {{#if endDate}}
        - {{date endDate}}</small>
       {{else}}
-       - Present</small>
+       </small>
       {{/if}}
     </header>
     {{#if summary}}
@@ -29,10 +29,10 @@
       {{/each}}
     </ul>
     {{/if}}
-    {{#if keywords.length}}
-    <strong>Keywords</strong>
-    <ul class="keywords">
-      {{#each keywords}}
+    {{#if stack.length}}
+    <strong>Stack</strong>
+    <ul class="stack">
+      {{#each stack}}
       <li>{{.}}</li>
       {{/each}}
     </ul>
