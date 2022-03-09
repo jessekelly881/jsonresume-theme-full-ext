@@ -35,7 +35,9 @@
       {{> publications }}
       {{> languages }}
       {{> interests }}
+      {{#unless resume.meta.hideReferences }}
       {{> references }}
+      {{/unless}}
     </div>
 	</body>
 </html>

@@ -85,38 +85,57 @@ section.heading header h2::after {
 section.heading header .contact {
   display: flex;
   flex-direction: column;
-  padding-bottom: var(--spacing);
+  /* padding-bottom: var(--spacing); */
 }
-@media (min-width: 567px) {
+
+section.heading header .header-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+@media (max-width: 567px) {
+  section.heading header .header-container {
+    flex-direction: column;
+  }
+}
+@media print {
+  section.heading header .header-container {
+    flex-direction: row;
+  }
+}
+
+/* @media (min-width: 567px) {
   section.heading header .contact {
     flex-direction: row;
     justify-content: space-between;
   }
-}
+} */
 section.heading header address {
   font-size: 90%;
   font-style: normal;
-  padding-bottom: var(--spacing);
+  /* padding-bottom: var(--spacing); */
 }
 section.heading .profiles {
   display: flex;
   flex-direction: column;
   padding-bottom: var(--spacing);
 }
-@media (min-width: 567px) {
+
+/* @media (min-width: 567px) { */
   section.heading .profiles {
     flex-direction: row;
     justify-content: start;
   }
-}
+/* } */
 section.heading .profiles .profile.print {
   display: none;
 }
-@media print {
+/* @media print {
   section.heading .profiles .profile.print {
     display: block;
   }
-}
+} */
 section.heading .profiles strong {
   margin: 0 var(--spacing-small) 0 0;
 }
@@ -184,7 +203,7 @@ section.skills .item .name {
   white-space: nowrap;
 }
 section.skills .item .keywords {
-  display: inline-block;
+  display: inline;
   font-size: 90%;
   vertical-align: top;
 }
@@ -199,7 +218,7 @@ section.projects .item strong {
   color: var(--copy-color-light);
   font-weight: 600;
   display: inline-block;
-  padding-top: var(--spacing);
+  /* padding-top: var(--spacing); */
 }
 section.awards .item .title {
   font-weight: 600;
@@ -294,11 +313,11 @@ section.experience .item, section.volunteering .item, section.projects .item, se
   page-break-inside: avoid;
 }
 
-@media print {
+/* @media print {
   section.heading .profiles .profile:not(.print), section.publications .item .website {
     display: none;
   }
-}
+} */
 
 section.experience .item header .subhead, section.volunteering .item header .subhead, section.projects .item header, section.education .item header, section.awards .item header, section.publications .item .subhead {
   align-items: baseline;
@@ -306,6 +325,12 @@ section.experience .item header .subhead, section.volunteering .item header .sub
   justify-content: space-between;
 }
 @media (min-width: 567px) {
+  section.experience .item header .subhead, section.volunteering .item header .subhead, section.projects .item header, section.education .item header, section.awards .item header, section.publications .item .subhead {
+    flex-direction: row;
+  }
+}
+
+@media print {
   section.experience .item header .subhead, section.volunteering .item header .subhead, section.projects .item header, section.education .item header, section.awards .item header, section.publications .item .subhead {
     flex-direction: row;
   }

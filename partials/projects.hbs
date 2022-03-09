@@ -30,12 +30,14 @@
     </ul>
     {{/if}}
     {{#if stack.length}}
-    <strong>Stack</strong>
-    <ul class="stack">
+    <div>
+    <strong>Stack:</strong>
+    <span class="keywords">
       {{#each stack}}
-      <li>{{.}}</li>
+      {{.}}{{#if @last}}{{else}},{{/if}}
       {{/each}}
-    </ul>
+    </span>
+    </div>
     {{/if}}
     {{#if roles.length}}
       <strong>Roles</strong>
