@@ -16,7 +16,7 @@
   :root {
     --spacing-double: 1.5rem;
     --spacing-small: .25rem;
-    --spacing: .75rem;
+    --spacing: .875rem;
   }
 }
 @media print {
@@ -25,6 +25,9 @@
     --base-font-size: 9pt;
     --copy-color-light: #000000;
     --copy-color: #000000;
+
+    /* Reduce spacing in pdf */
+    --spacing-double: 0.875rem; 
   }
 }
 
