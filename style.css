@@ -16,7 +16,7 @@
   :root {
     --spacing-double: 1.5rem;
     --spacing-small: .25rem;
-    --spacing: .875rem;
+    --spacing: .75rem;
   }
 }
 @media print {
